@@ -1,36 +1,6 @@
-import { Avatar, Card, CardHeader, CardMedia, List, ListItem } from '@mui/material';
+import MovieCardList, { Movie } from 'components/movieCardList';
 import { NextPage } from 'next';
 import React from 'react';
-
-type Movie = {
-  id: string;
-  title: string;
-  channelId: string;
-  avatarUrl: string;
-  thumbnailUrl: string;
-  createdAt: number;
-};
-
-type Props = {
-  movies: Movie[];
-};
-
-const MovieList = (props: Props) => {
-  return (
-    <List sx={{ pl: 1, pr: 1 }}>
-      {props.movies.map((movie) => (
-        <React.Fragment key={movie.id}>
-          <ListItem disablePadding>
-            <Card>
-              <CardMedia image={movie.thumbnailUrl} height={194} component={'img'} />
-              <CardHeader avatar={<Avatar>s</Avatar>} title={movie.title} subheader={movie.createdAt} />
-            </Card>
-          </ListItem>
-        </React.Fragment>
-      ))}
-    </List>
-  );
-};
 
 const a: Movie[] = [
   {
@@ -56,7 +26,7 @@ const a: Movie[] = [
 const HomePage: NextPage = () => {
   return (
     <>
-      <MovieList movies={a} />
+      <MovieCardList movies={a} />
     </>
   );
 };
