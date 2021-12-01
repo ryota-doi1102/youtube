@@ -12,7 +12,7 @@ type Props = {
   mylists: Mylist[];
 };
 
-const MylistLibrary = (props: Props) => {
+const MylistList = (props: Props) => {
   return (
     <List>
       <Divider />
@@ -33,4 +33,4 @@ const MylistLibrary = (props: Props) => {
   );
 };
 
-export default MylistLibrary;
+export default MylistList;

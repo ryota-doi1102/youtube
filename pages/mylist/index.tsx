@@ -1,4 +1,4 @@
-import MylistLibrary, { Mylist } from 'components/mylistList';
+import MylistList, { Mylist } from 'components/mylistList';
 import { NextPage } from 'next';
 import React from 'react';
 
@@ -16,7 +16,7 @@ const a: Mylist[] = [
 ];
 
 const MylistListPage: NextPage = () => {
-  return <MylistLibrary mylists={a} />;
+  return <MylistList mylists={a} />;
 };
 
 export default MylistListPage;
