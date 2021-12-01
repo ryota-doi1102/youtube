@@ -16,15 +16,7 @@ const ChannellistList = (props: Props) => {
     <List>
       <Divider />
       {props.channellists.map((channellist) => (
-        <ListItem
-          key={channellist.id}
-          divider
-          secondaryAction={
-            <IconButton>
-              <DeleteIcon />
-            </IconButton>
-          }
-        >
+        <ListItem key={channellist.id} divider disablePadding>
           <ListItemButton>
             <ListItemText>{channellist.title}</ListItemText>
           </ListItemButton>
