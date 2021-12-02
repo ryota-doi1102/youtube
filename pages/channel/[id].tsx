@@ -1,16 +1,15 @@
-import Channellist, { Channel } from 'components/chanellist';
+import UserChannel, { Channel } from 'components/channel';
 import MovieCardList, { Movie } from 'components/movieCardList';
 import { NextPage } from 'next';
+import React from 'react';
 
-const a: Channel[] = [
-  {
-    id: 'hogehoge',
-    avatarUrl:
-      'https://i.ytimg.com/vi/B_ncQhqfHas/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBwrZyhtIkSy80xxx3hnhOS53_vqg',
-    name: 'アル中カラカラ',
-    createdAt: 64781964,
-  },
-];
+const a: Channel = {
+  id: 'hogehoge',
+  avatarUrl:
+    'https://i.ytimg.com/vi/B_ncQhqfHas/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBwrZyhtIkSy80xxx3hnhOS53_vqg',
+  name: 'アル中カラカラ',
+  createdAt: 64781964,
+};
 
 const b: Movie[] = [
   {
@@ -36,7 +35,6 @@ const b: Movie[] = [
 const ChannelPage: NextPage = () => {
   return (
     <>
-      <Channellist channels={a} />
       <MovieCardList movies={b} />
     </>
   );
