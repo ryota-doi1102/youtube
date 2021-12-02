@@ -1,4 +1,4 @@
-import { List, Divider, ListItem, Button, ListItemButton, ListItemAvatar, Avatar, ListItemText } from '@mui/material';
+import { List, Divider, ListItem, Button, ListItemAvatar, Avatar, ListItemText } from '@mui/material';
 import React from 'react';
 
 export type Channel = {
@@ -8,22 +8,19 @@ export type Channel = {
   createdAt: number;
 };
 
-const UserChannel = (UserChannel: Channel) => {
+type Props = {
+  userChannel: Channel;
+};
+
+const UserChannel = (props: Props) => {
   return (
     <List>
       <Divider />
-      <ListItem
-        key={UserChannel.id}
-        divider
-        disablePadding
-        secondaryAction={<Button variant="outlined">チャンネル登録</Button>}
-      >
-        <ListItemButton>
-          <ListItemAvatar>
-            <Avatar src={UserChannel.avatarUrl} />
-          </ListItemAvatar>
-          <ListItemText>{UserChannel.name}</ListItemText>
-        </ListItemButton>
+      <ListItem key={props.userChannel.id} divider secondaryAction={<Button variant="outlined">チャンネル登録</Button>}>
+        <ListItemAvatar>
+          <Avatar src={props.userChannel.avatarUrl} />
+        </ListItemAvatar>
+        <ListItemText>{props.userChannel.name}</ListItemText>
       </ListItem>
     </List>
   );

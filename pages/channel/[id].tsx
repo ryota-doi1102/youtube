@@ -35,6 +35,7 @@ const b: Movie[] = [
 const ChannelPage: NextPage = () => {
   return (
     <>
+      <UserChannel userChannel={a} />
       <MovieCardList movies={b} />
     </>
   );
